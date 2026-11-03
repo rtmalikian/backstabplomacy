@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Backstabplomacy — Play Diplomacy Online Free | Open-Source Backstabbr Alternative for Browser & Android</title>
+<meta name="description" content="Play Diplomacy online free in your browser or on Android. Backstabplomacy is an open-source, mobile-first Backstabbr alternative with a geographically accurate Europe 1901 map, vDiplomacy-compatible variant maps, Google Sign-In, saved orders, push notifications, beginner guide, smart hints, an AI strategist, and in-character AI press messages for England, France, Germany, Italy, Austria, Russia and Turkey. No download, no dice — just negotiation, support, convoy and betrayal.">
+<meta name="keywords" content="Diplomacy game online, play Diplomacy free, Backstabbr alternative, Backstabber game, Diplomacy browser game, Diplomacy Android app, webDiplomacy variant maps, vDiplomacy maps, Diplomacy PWA, online board game strategy, Diplomacy orders support convoy, Diplomacy beginner guide">
+<meta name="author" content="Raphael Malikian">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rtmalikian.github.io/backstabplomacy/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Backstabplomacy — Play Diplomacy Online Free (Browser & Android)">
+<meta property="og:description" content="Open-source Diplomacy with a geographically accurate map, vDiplomacy-compatible variants, Google Sign-In, push notifications, AI hints and in-character press.">
+<meta property="og:url" content="https://rtmalikian.github.io/backstabplomacy/">
+<meta name="theme-color" content="#0b1020">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoGame","name":"Backstabplomacy — Diplomacy Online","alternateName":["Backstabber Diplomacy Online","Open-Source Backstabbr Alternative"],"description":"Free open-source online Diplomacy game for browser and Android with geographically accurate map, variant map support, AI hints and push notifications.","genre":["Strategy","Board Game"],"gamePlatform":["Web Browser","Android","PWA"],"applicationCategory":"Game","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Raphael Malikian"}}
+</script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">🗡️</span><div><h1>Backstab<em>plomacy</em></h1><p>Diplomacy, with daggers — free, open-source, browser &amp; Android</p></div></div>
+  <div class="top-actions">
+    <span id="userBadge" class="user-badge">Guest</span>
+    <span id="xpChip" class="user-badge" title="Your trophy XP and rank">🏆 0 XP · Cadet Envoy</span>
+    <button id="googleBtn" class="btn gold">Sign in with Google</button>
+    <button id="demoSignIn" class="btn ghost">Demo sign-in</button>
+    <button id="signOut" class="btn ghost hidden">Sign out</button>
+    <button id="installBtn" class="btn ghost hidden">📲 Install app</button>
+    <button id="notifyBtn" class="btn ghost">🔔 Notifications</button>
+  </div>
+</header>
+
+<div class="phasebar">
+  <div><strong id="phaseLabel">Spring 1901 — Orders</strong> <span id="playingAs"></span></div>
+  <div class="phase-actions">
+    <label>Playing as
+      <select id="powerSelect"></select>
+    </label>
+    <button id="hintBtn" class="btn">💡 Hints</button>
+    <button id="aiHintBtn" class="btn purple">🤖 Ask AI Strategist</button>
+    <button id="resolveBtn" class="btn gold big">⚔️ Resolve turn</button>
+    <button id="newGameBtn" class="btn ghost">New game</button>
+  </div>
+</div>
+
+<main class="layout">
+  <section class="map-card">
+    <div class="map-tools">
+      <button class="chip" id="toggleLines">Adjacency lines: on</button>
+      <button class="chip" id="toggleLabels">Labels: on</button>
+      <span class="map-note">Map positions use real latitude/longitude of each province centre — Europe, geographically accurate, not a cartoon redraw.</span>
+    </div>
+    <svg id="map" viewBox="0 0 1000 680" role="img" aria-label="Geographically accurate map of Europe in 1901 for Diplomacy"></svg>
+    <div id="selectedInfo" class="selected-info">Tap a province to inspect it. Tap one of your units, then a highlighted neighbour, to set a Move order in one tap.</div>
+    <div class="scoreboard" id="scoreboard"></div>
+  </section>
+
+  <aside class="panel">
+    <nav class="tabs">
+      <button data-tab="orders" class="active">Orders</button>
+      <button data-tab="trophies">Trophies 🏆</button>
+      <button data-tab="press">Press ✉️</button>
+      <button data-tab="hints">Hints</button>
+      <button data-tab="guide">Beginner guide</button>
+      <button data-tab="settings">AI &amp; Settings</button>
+    </nav>
+
+    <section id="tab-orders" class="tab active">
+      <h2>Your orders</h2>
+      <p class="small">Orders save automatically to this device (and to your profile when signed in). Unordered units Hold. Illegal orders are explained, not silently accepted — a Backstabbr pain point fixed here.</p>
+      <div id="validationBox" class="validation ok">✅ Orders not checked yet — validation runs live as you type, and again before any turn can be submitted.</div>
+      <div id="ordersList"></div>
+      <div class="row"><button id="validateBtn" class="btn purple">✓ Check my orders before submitting</button><button id="saveBtn" class="btn">💾 Save now</button><button id="exportBtn" class="btn ghost">Export save</button><label class="btn ghost file">Import save<input id="importFile" type="file" accept=".json" hidden></label></div>
+      <h3>Turn log</h3><div id="log" class="log"></div>
+    </section>
+
+    <section id="tab-trophies" class="tab">
+      <h2>Trophy cabinet 🏆</h2>
+      <div id="levelBox" class="persona-card"></div>
+      <p class="small">Trophies reward the habits that make Diplomacy great — showing up, giving clear orders, keeping (or breaking!) your word, trying new maps. Built on self-determination theory: autonomy (your maps, your personas), competence (hints, clean sheets), relatedness (press, pledges). No punishment streaks, no dark patterns — come back because it's fun. Full design notes: <code>docs/GAMIFICATION_AND_GAME_THEORY.md</code>.</p>
+      <div id="trophyGrid" class="trophy-grid"></div>
+    </section>
+
+    <section id="tab-press" class="tab">
+      <h2>Press — negotiate, in character 🎭</h2>
+      <p class="small">Write plainly, then optionally rewrite your message in your power's theatrical persona. It stays in English — just with the accent, idioms and swagger. Meaning, province names and numbers are never changed.</p>
+      <label>To <select id="pressTo"></select></label>
+      <label>Your power's persona <select id="personaSelect"></select></label>
+      <div id="personaCard" class="persona-card"></div>
+      <textarea id="pressText" rows="4" placeholder="e.g. France, if you move to Burgundy I will support you into Belgium next fall. Deal?"></textarea>
+      <label class="check"><input type="checkbox" id="pressPledge"> 🤝 Make this a <strong>public pledge</strong> — a commitment device. Everyone will see it, and your word becomes a game piece (Schelling would approve).</label>
+      <div class="row"><button id="personaBtn" class="btn purple">🎭 Rewrite in character</button><button id="sendPress" class="btn gold">Send press</button></div>
+      <p class="small" id="personaStatus"></p>
+      <div id="pressLog" class="log tall"></div>
+    </section>
+
+    <section id="tab-hints" class="tab">
+      <h2>Hints &amp; AI Strategist</h2>
+      <p class="small">Rule-based hints always work offline. If you enable an OpenAI-compatible endpoint in Settings, <strong>Ask AI Strategist</strong> sends only the board position (units, centres, season — never your private press unless you paste it) and returns tailored advice.</p>
+      <div id="gtTip" class="persona-card"></div>
+      <div id="hintsBox" class="hints"></div>
+    </section>
+
+    <section id="tab-guide" class="tab">
+      <h2>New here? Diplomacy in 5 minutes</h2>
+      <ol class="guide">
+        <li><strong>The goal.</strong> Europe, 1901. 7 Great Powers, 34 supply centres (★). Control <strong>18</strong> after a Fall turn and you win. There are no dice and no luck — only talk and timing.</li>
+        <li><strong>Units.</strong> Armies move on land, Fleets on sea and coasts. Every unit has strength 1. You may have one unit per centre you own.</li>
+        <li><strong>Each year:</strong> Spring moves → Fall moves → winter builds/disband. All orders are written in secret, then revealed and resolved at the same time.</li>
+        <li><strong>Four orders.</strong> <b>Hold</b> — stay and defend. <b>Move</b> — go to a neighbouring province. <b>Support</b> — lend your strength to another unit's move or hold (you can support allies!). <b>Convoy</b> — a Fleet in a sea carries an Army across it.</li>
+        <li><strong>Winning a fight.</strong> Strength = 1 + supports. Bigger strength wins; equal strength <em>bounces</em> and nobody moves. Support is <em>cut</em> if the supporter is attacked from somewhere else.</li>
+        <li><strong>The real game is talk.</strong> Use Press. Promise, coordinate supports and convoys… and yes, occasionally backstab. Nothing is binding. That is the game.</li>
+        <li><strong>First game tips.</strong> Grab neutral centres near you in 1901 (Norway/Denmark/Holland/Belgium, Spain/Portugal, Greece/Bulgaria/Rumania/Serbia). Never leave a home centre empty in Fall. Ask for one support instead of attacking alone. Use 💡 Hints every turn while you learn.</li>
+        <li><strong>Try it safely.</strong> Set orders below, tap a unit then a highlighted province on the map, and press ⚔️ Resolve turn. Bots play the other powers, so you can learn solo, then switch “Playing as” for pass-and-play with friends.</li>
+      </ol>
+      <h3>Classic openings (one line each)</h3>
+      <ul class="small">
+        <li><b>England:</b> F Lon–NTH, F Edi–NWG, A Lvp–Yor — take Norway, eye Belgium.</li>
+        <li><b>France:</b> A Par–Bur, A Mar–Spa, F Bre–MAO — Spain + Portugal, watch Italy.</li>
+        <li><b>Germany:</b> A Ber–Kie, A Mun–Ruh, F Kie–Den — Denmark + Holland.</li>
+        <li><b>Italy:</b> A Ven–Tyr, A Rom–Apu, F Nap–ION — Greece/Tunis, Austria decision looms.</li>
+        <li><b>Austria:</b> A Vie–Gal, A Bud–Ser, F Tri–Alb — Serbia + Greece, talk to everyone.</li>
+        <li><b>Russia:</b> A Mos–Ukr, A War–Gal, F Sev–Rum, F StP–BOT — Rumania, Sweden via Finland.</li>
+        <li><b>Turkey:</b> A Con–Bul, A Smy–Con, F Ank–BLA — Bulgaria, then the Black Sea question.</li>
+      </ul>
+    </section>
+
+    <section id="tab-settings" class="tab">
+      <h2>AI endpoint (optional, yours)</h2>
+      <p class="small">Any OpenAI-compatible server works: OpenAI, OpenRouter, Ollama (<code>http://localhost:11434/v1</code>), LM Studio, llama.cpp. Your key stays in this browser only — it is never sent anywhere except the endpoint you type.</p>
+      <label class="check"><input type="checkbox" id="aiEnabled"> Enable AI features (persona press + AI Strategist)</label>
+      <label>Base URL <input id="aiBase" placeholder="https://api.openai.com/v1"></label>
+      <label>Model <input id="aiModel" placeholder="gpt-4o-mini"></label>
+      <label>API key <input id="aiKey" type="password" placeholder="Stored locally only" autocomplete="off"></label>
+      <div class="row"><button id="aiTest" class="btn">Test endpoint</button><span id="aiStatus" class="small"></span></div>
+
+      <h2>Your profile</h2>
+      <div class="row"><img id="avatarPreview" alt="Your profile photo" style="width:56px;height:56px;border-radius:50%;object-fit:cover;background:#232d52" src=""><label class="btn ghost file">📸 Add / change profile photo<input id="avatarFile" type="file" accept="image/*" hidden></label></div>
+      <p class="small">Your photo is stored only in this browser, shown next to your name, and unlocks the 📸 Face of an Empire trophy.</p>
+
+      <h2>Google Sign-In</h2>
+      <p class="small">Backstabbr uses Google accounts — so does this. Paste your own Google OAuth Web Client ID (Google Cloud Console → APIs → Credentials) to enable real Google Sign-In here; your saves are then keyed to your Google profile on this device. Without a Client ID, Demo sign-in shows the full saved-profile flow.</p>
+      <label>Google Client ID <input id="googleClientId" placeholder="xxxx.apps.googleusercontent.com"></label>
+
+      <h2>Notifications</h2>
+      <label class="check"><input type="checkbox" id="pushEnabled"> Enable turn reminders on this device</label>
+      <div class="row"><button id="testNotify" class="btn ghost">Send test notification</button><button id="remindBtn" class="btn ghost">Remind me in 10 seconds (demo)</button></div>
+      <p class="small">Real cross-device Web Push needs a small VAPID push server — subscription + server stub are documented in <code>docs/GOOGLE_SIGNIN_AND_PUSH.md</code>. In-app and Android PWA notifications work from this page today.</p>
+
+      <h2>Maps — Classic, variants &amp; custom maps 🗺️</h2>
+      <p class="small">Pick a built-in map, import a variant JSON in the vDiplomacy/webDiplomacy data model (territories + borders + centres + coordinates), paste your own custom map, or download the current map and edit it. The bundled Classic variant lives in <code>variants/classic.json</code>.</p>
+      <label>Choose a map
+        <select id="mapSelect">
+          <option value="classic">Classic — Europe 1901 (75 provinces, 34 centres, 18 to win)</option>
+          <option value="ankara">Ankara Crescent — Classic map, chaos borders (vDiplomacy rule-twist)</option>
+          <option value="sprint">Western Sprint — custom teaching map (3 powers, fast game, 7 to win)</option>
+          <option value="caucasus">🏔️ Caucasus &amp; Caspian — Armenia, Georgia, Azerbaijan, Persia, Russia, Turkey, Greece (42 territories, 11 to win)</option>
+          <option value="empires">🏛️ Empires of the Crossroads — Rome, Byzantium, Armenia, Persia, Iberia, Albania, Egypt (historic what-if, 12 to win)</option>
+        </select>
+      </label>
+      <label>Centres needed to win on the loaded map (set by the map file) <input id="winScInput" type="number" min="2" max="40" value="18" readonly></label>
+      <div class="row"><button id="applyMapBtn" class="btn gold">Load selected map (new game)</button><button id="downloadMapBtn" class="btn ghost">⬇️ Download current map JSON</button></div>
+      <label class="btn ghost file">Import variant / custom map JSON<input id="variantFile" type="file" accept=".json" hidden></label>
+      <p class="small" id="variantStatus"></p>
+      <label>…or paste a custom map JSON here and load it
+        <textarea id="customMapText" rows="5" placeholder='{"variant":"My Map","territories":[{"id":"LON","name":"London","type":"coast","supplyCenter":true,"home":"England","lat":51.5,"lon":-0.12,"borders":["ENG"]}],"startingUnits":{...},"winSupplyCenters":10}'></textarea>
+      </label>
+      <button id="loadCustomMapBtn" class="btn">Load pasted custom map</button>
+      <p class="small">Custom-map JSON is validated before loading — unknown border references, missing centres or missing starting units are reported (with a notification) instead of breaking the game.</p>
+
+      <h2>Opponents</h2>
+      <p class="small">Powers you are not controlling are played by simple bots in this local edition, so a game always moves. Switch “Playing as” any time for hot-seat play with friends on one device.</p>
+    </section>
+  </aside>
+</main>
+
+<div id="toast" class="toast hidden" role="alert"></div>
+<footer>
+  <p>Backstabplomacy — an original, open-source tribute built from the public rules of Diplomacy. Not affiliated with Backstabbr, webDiplomacy, vDiplomacy, Hasbro or Avalon Hill. Map data &amp; artwork are original to this project. Built by Raphael Malikian — open to collaborate: <a href="https://github.com/rtmalikian">github.com/rtmalikian</a> · rtmalikian@gmail.com</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/personas.js"></script>
+<script src="js/trophies.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

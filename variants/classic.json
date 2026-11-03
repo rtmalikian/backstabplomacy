@@ -1,0 +1,1355 @@
+{
+ "variant": "Classic",
+ "source": "Original data compiled for this project. Territory/border structure follows the classic Diplomacy map design and the vDiplomacy/webDiplomacy variant data model (territories, types, borders, home centres, coordinates) so variant JSON files in that model can be imported. Map artwork and coordinates are original: lat/lon are real province-centre coordinates.",
+ "territories": [
+  {
+   "id": "NAO",
+   "name": "North Atlantic Ocean",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 58.0,
+   "lon": -22.0,
+   "borders": [
+    "CLY",
+    "IRI",
+    "MAO",
+    "NWG"
+   ]
+  },
+  {
+   "id": "NWG",
+   "name": "Norwegian Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 66.0,
+   "lon": -2.0,
+   "borders": [
+    "BAR",
+    "CLY",
+    "EDI",
+    "NAO",
+    "NTH",
+    "NWY"
+   ]
+  },
+  {
+   "id": "BAR",
+   "name": "Barents Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 71.0,
+   "lon": 28.0,
+   "borders": [
+    "NWG",
+    "NWY",
+    "STP"
+   ]
+  },
+  {
+   "id": "CLY",
+   "name": "Clyde",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 55.4,
+   "lon": -4.8,
+   "borders": [
+    "EDI",
+    "IRI",
+    "LVP",
+    "NAO",
+    "NWG"
+   ]
+  },
+  {
+   "id": "EDI",
+   "name": "Edinburgh",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "England",
+   "lat": 55.95,
+   "lon": -3.19,
+   "borders": [
+    "CLY",
+    "LVP",
+    "NTH",
+    "NWG",
+    "YOR"
+   ]
+  },
+  {
+   "id": "LVP",
+   "name": "Liverpool",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "England",
+   "lat": 53.4,
+   "lon": -2.98,
+   "borders": [
+    "CLY",
+    "EDI",
+    "IRI",
+    "WAL",
+    "YOR"
+   ]
+  },
+  {
+   "id": "YOR",
+   "name": "Yorkshire",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 53.96,
+   "lon": -1.08,
+   "borders": [
+    "EDI",
+    "LON",
+    "LVP",
+    "NTH",
+    "WAL"
+   ]
+  },
+  {
+   "id": "WAL",
+   "name": "Wales",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 52.4,
+   "lon": -3.7,
+   "borders": [
+    "ENG",
+    "IRI",
+    "LON",
+    "LVP",
+    "YOR"
+   ]
+  },
+  {
+   "id": "LON",
+   "name": "London",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "England",
+   "lat": 51.5,
+   "lon": -0.12,
+   "borders": [
+    "ENG",
+    "NTH",
+    "WAL",
+    "YOR"
+   ]
+  },
+  {
+   "id": "IRI",
+   "name": "Irish Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 53.5,
+   "lon": -5.5,
+   "borders": [
+    "CLY",
+    "ENG",
+    "LVP",
+    "MAO",
+    "NAO",
+    "WAL"
+   ]
+  },
+  {
+   "id": "ENG",
+   "name": "English Channel",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 49.8,
+   "lon": -1.5,
+   "borders": [
+    "BEL",
+    "BRE",
+    "IRI",
+    "LON",
+    "MAO",
+    "NTH",
+    "PIC",
+    "WAL"
+   ]
+  },
+  {
+   "id": "NTH",
+   "name": "North Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 56.0,
+   "lon": 3.0,
+   "borders": [
+    "BEL",
+    "DEN",
+    "EDI",
+    "ENG",
+    "HEL",
+    "HOL",
+    "LON",
+    "NWG",
+    "NWY",
+    "SKA",
+    "YOR"
+   ]
+  },
+  {
+   "id": "HEL",
+   "name": "Heligoland Bight",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 54.2,
+   "lon": 7.8,
+   "borders": [
+    "DEN",
+    "HOL",
+    "KIE",
+    "NTH"
+   ]
+  },
+  {
+   "id": "SKA",
+   "name": "Skagerrak",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 57.8,
+   "lon": 10.5,
+   "borders": [
+    "BAL",
+    "DEN",
+    "NTH",
+    "NWY",
+    "SWE"
+   ]
+  },
+  {
+   "id": "BAL",
+   "name": "Baltic Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 56.5,
+   "lon": 19.5,
+   "borders": [
+    "BER",
+    "BOT",
+    "DEN",
+    "KIE",
+    "LVN",
+    "PRU",
+    "SKA",
+    "SWE"
+   ]
+  },
+  {
+   "id": "BOT",
+   "name": "Gulf of Bothnia",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 62.5,
+   "lon": 20.0,
+   "borders": [
+    "BAL",
+    "FIN",
+    "LVN",
+    "STP",
+    "SWE"
+   ]
+  },
+  {
+   "id": "NWY",
+   "name": "Norway",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 60.5,
+   "lon": 8.0,
+   "borders": [
+    "BAR",
+    "FIN",
+    "NTH",
+    "NWG",
+    "SKA",
+    "STP",
+    "SWE"
+   ]
+  },
+  {
+   "id": "SWE",
+   "name": "Sweden",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 59.3,
+   "lon": 18.1,
+   "borders": [
+    "BAL",
+    "BOT",
+    "DEN",
+    "FIN",
+    "NWY",
+    "SKA"
+   ]
+  },
+  {
+   "id": "DEN",
+   "name": "Denmark",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 55.7,
+   "lon": 12.6,
+   "borders": [
+    "BAL",
+    "HEL",
+    "KIE",
+    "NTH",
+    "SKA",
+    "SWE"
+   ]
+  },
+  {
+   "id": "FIN",
+   "name": "Finland",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 61.9,
+   "lon": 25.7,
+   "borders": [
+    "BOT",
+    "NWY",
+    "STP",
+    "SWE"
+   ]
+  },
+  {
+   "id": "STP",
+   "name": "St. Petersburg",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Russia",
+   "lat": 59.93,
+   "lon": 30.33,
+   "borders": [
+    "BAR",
+    "BOT",
+    "FIN",
+    "LVN",
+    "MOS",
+    "NWY"
+   ]
+  },
+  {
+   "id": "LVN",
+   "name": "Livonia",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 57.5,
+   "lon": 25.0,
+   "borders": [
+    "BAL",
+    "BOT",
+    "MOS",
+    "PRU",
+    "STP",
+    "WAR"
+   ]
+  },
+  {
+   "id": "MOS",
+   "name": "Moscow",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Russia",
+   "lat": 55.75,
+   "lon": 37.62,
+   "borders": [
+    "LVN",
+    "SEV",
+    "STP",
+    "UKR",
+    "WAR"
+   ]
+  },
+  {
+   "id": "WAR",
+   "name": "Warsaw",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Russia",
+   "lat": 52.23,
+   "lon": 21.01,
+   "borders": [
+    "GAL",
+    "LVN",
+    "MOS",
+    "PRU",
+    "SIL",
+    "UKR"
+   ]
+  },
+  {
+   "id": "UKR",
+   "name": "Ukraine",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 49.0,
+   "lon": 31.5,
+   "borders": [
+    "GAL",
+    "MOS",
+    "RUM",
+    "SEV",
+    "WAR"
+   ]
+  },
+  {
+   "id": "SEV",
+   "name": "Sevastopol",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Russia",
+   "lat": 44.6,
+   "lon": 33.5,
+   "borders": [
+    "ARM",
+    "BLA",
+    "MOS",
+    "RUM",
+    "UKR"
+   ]
+  },
+  {
+   "id": "PRU",
+   "name": "Prussia",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 54.5,
+   "lon": 18.5,
+   "borders": [
+    "BAL",
+    "BER",
+    "LVN",
+    "SIL",
+    "WAR"
+   ]
+  },
+  {
+   "id": "BER",
+   "name": "Berlin",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Germany",
+   "lat": 52.52,
+   "lon": 13.4,
+   "borders": [
+    "BAL",
+    "KIE",
+    "MUN",
+    "PRU",
+    "SIL"
+   ]
+  },
+  {
+   "id": "SIL",
+   "name": "Silesia",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 51.1,
+   "lon": 17.0,
+   "borders": [
+    "BER",
+    "BOH",
+    "GAL",
+    "MUN",
+    "PRU",
+    "WAR"
+   ]
+  },
+  {
+   "id": "KIE",
+   "name": "Kiel",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Germany",
+   "lat": 54.32,
+   "lon": 10.12,
+   "borders": [
+    "BAL",
+    "BER",
+    "DEN",
+    "HEL",
+    "HOL",
+    "MUN",
+    "RUH"
+   ]
+  },
+  {
+   "id": "HOL",
+   "name": "Holland",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 52.37,
+   "lon": 4.9,
+   "borders": [
+    "BEL",
+    "HEL",
+    "KIE",
+    "NTH",
+    "RUH"
+   ]
+  },
+  {
+   "id": "BEL",
+   "name": "Belgium",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 50.85,
+   "lon": 4.35,
+   "borders": [
+    "BUR",
+    "ENG",
+    "HOL",
+    "NTH",
+    "PIC",
+    "RUH"
+   ]
+  },
+  {
+   "id": "RUH",
+   "name": "Ruhr",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 51.5,
+   "lon": 7.2,
+   "borders": [
+    "BEL",
+    "BUR",
+    "HOL",
+    "KIE",
+    "MUN"
+   ]
+  },
+  {
+   "id": "MUN",
+   "name": "Munich",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Germany",
+   "lat": 48.14,
+   "lon": 11.58,
+   "borders": [
+    "BER",
+    "BOH",
+    "BUR",
+    "KIE",
+    "RUH",
+    "SIL",
+    "TYR"
+   ]
+  },
+  {
+   "id": "BOH",
+   "name": "Bohemia",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 50.0,
+   "lon": 15.5,
+   "borders": [
+    "GAL",
+    "MUN",
+    "SIL",
+    "TYR",
+    "VIE"
+   ]
+  },
+  {
+   "id": "GAL",
+   "name": "Galicia",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 49.8,
+   "lon": 23.5,
+   "borders": [
+    "BOH",
+    "BUD",
+    "RUM",
+    "SIL",
+    "UKR",
+    "VIE",
+    "WAR"
+   ]
+  },
+  {
+   "id": "PIC",
+   "name": "Picardy",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 49.9,
+   "lon": 2.3,
+   "borders": [
+    "BEL",
+    "BRE",
+    "BUR",
+    "ENG",
+    "PAR"
+   ]
+  },
+  {
+   "id": "BRE",
+   "name": "Brest",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "France",
+   "lat": 48.39,
+   "lon": -4.49,
+   "borders": [
+    "ENG",
+    "GAS",
+    "MAO",
+    "PAR",
+    "PIC"
+   ]
+  },
+  {
+   "id": "PAR",
+   "name": "Paris",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "France",
+   "lat": 48.85,
+   "lon": 2.35,
+   "borders": [
+    "BRE",
+    "BUR",
+    "GAS",
+    "PIC"
+   ]
+  },
+  {
+   "id": "BUR",
+   "name": "Burgundy",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 47.2,
+   "lon": 4.8,
+   "borders": [
+    "BEL",
+    "GAS",
+    "MAR",
+    "MUN",
+    "PAR",
+    "PIC",
+    "RUH",
+    "TYR"
+   ]
+  },
+  {
+   "id": "GAS",
+   "name": "Gascony",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 43.8,
+   "lon": -0.5,
+   "borders": [
+    "BRE",
+    "BUR",
+    "MAO",
+    "MAR",
+    "PAR",
+    "SPA"
+   ]
+  },
+  {
+   "id": "MAO",
+   "name": "Mid-Atlantic Ocean",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 43.0,
+   "lon": -12.0,
+   "borders": [
+    "BRE",
+    "ENG",
+    "GAS",
+    "IRI",
+    "NAF",
+    "NAO",
+    "POR",
+    "SPA",
+    "WES"
+   ]
+  },
+  {
+   "id": "POR",
+   "name": "Portugal",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 38.72,
+   "lon": -9.14,
+   "borders": [
+    "MAO",
+    "SPA"
+   ]
+  },
+  {
+   "id": "SPA",
+   "name": "Spain",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 40.4,
+   "lon": -3.7,
+   "borders": [
+    "GAS",
+    "GOL",
+    "MAO",
+    "MAR",
+    "POR",
+    "WES"
+   ]
+  },
+  {
+   "id": "MAR",
+   "name": "Marseilles",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "France",
+   "lat": 43.3,
+   "lon": 5.37,
+   "borders": [
+    "BUR",
+    "GAS",
+    "GOL",
+    "PIE",
+    "SPA"
+   ]
+  },
+  {
+   "id": "PIE",
+   "name": "Piedmont",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 45.07,
+   "lon": 7.68,
+   "borders": [
+    "GOL",
+    "MAR",
+    "TUS",
+    "TYR",
+    "VEN"
+   ]
+  },
+  {
+   "id": "GOL",
+   "name": "Gulf of Lyon",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 42.5,
+   "lon": 4.5,
+   "borders": [
+    "MAR",
+    "PIE",
+    "SPA",
+    "TUS",
+    "TYS",
+    "WES"
+   ]
+  },
+  {
+   "id": "WES",
+   "name": "Western Mediterranean",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 39.5,
+   "lon": 2.0,
+   "borders": [
+    "GOL",
+    "MAO",
+    "NAF",
+    "SPA",
+    "TUN",
+    "TYS"
+   ]
+  },
+  {
+   "id": "NAF",
+   "name": "North Africa",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 34.0,
+   "lon": -6.0,
+   "borders": [
+    "MAO",
+    "TUN",
+    "WES"
+   ]
+  },
+  {
+   "id": "TUN",
+   "name": "Tunis",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 36.8,
+   "lon": 10.18,
+   "borders": [
+    "ION",
+    "NAF",
+    "TYS",
+    "WES"
+   ]
+  },
+  {
+   "id": "TUS",
+   "name": "Tuscany",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 43.7,
+   "lon": 10.4,
+   "borders": [
+    "GOL",
+    "PIE",
+    "ROM",
+    "TYS",
+    "VEN"
+   ]
+  },
+  {
+   "id": "ROM",
+   "name": "Rome",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Italy",
+   "lat": 41.9,
+   "lon": 12.5,
+   "borders": [
+    "APU",
+    "NAP",
+    "TUS",
+    "TYS",
+    "VEN"
+   ]
+  },
+  {
+   "id": "VEN",
+   "name": "Venice",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Italy",
+   "lat": 45.44,
+   "lon": 12.32,
+   "borders": [
+    "ADR",
+    "APU",
+    "PIE",
+    "ROM",
+    "TRI",
+    "TUS",
+    "TYR"
+   ]
+  },
+  {
+   "id": "APU",
+   "name": "Apulia",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 41.1,
+   "lon": 16.9,
+   "borders": [
+    "ADR",
+    "ION",
+    "NAP",
+    "ROM",
+    "VEN"
+   ]
+  },
+  {
+   "id": "NAP",
+   "name": "Naples",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Italy",
+   "lat": 40.85,
+   "lon": 14.27,
+   "borders": [
+    "APU",
+    "ION",
+    "ROM",
+    "TYS"
+   ]
+  },
+  {
+   "id": "TYS",
+   "name": "Tyrrhenian Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 40.0,
+   "lon": 12.0,
+   "borders": [
+    "GOL",
+    "ION",
+    "NAP",
+    "ROM",
+    "TUN",
+    "TUS",
+    "WES"
+   ]
+  },
+  {
+   "id": "TYR",
+   "name": "Tyrolia",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 47.25,
+   "lon": 11.4,
+   "borders": [
+    "BOH",
+    "BUR",
+    "MUN",
+    "PIE",
+    "TRI",
+    "VEN",
+    "VIE"
+   ]
+  },
+  {
+   "id": "VIE",
+   "name": "Vienna",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Austria",
+   "lat": 48.2,
+   "lon": 16.37,
+   "borders": [
+    "BOH",
+    "BUD",
+    "GAL",
+    "TRI",
+    "TYR"
+   ]
+  },
+  {
+   "id": "BUD",
+   "name": "Budapest",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Austria",
+   "lat": 47.5,
+   "lon": 19.05,
+   "borders": [
+    "GAL",
+    "RUM",
+    "SER",
+    "TRI",
+    "VIE"
+   ]
+  },
+  {
+   "id": "TRI",
+   "name": "Trieste",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Austria",
+   "lat": 45.65,
+   "lon": 13.78,
+   "borders": [
+    "ADR",
+    "ALB",
+    "BUD",
+    "SER",
+    "TYR",
+    "VEN",
+    "VIE"
+   ]
+  },
+  {
+   "id": "ADR",
+   "name": "Adriatic Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 43.5,
+   "lon": 15.5,
+   "borders": [
+    "ALB",
+    "APU",
+    "ION",
+    "TRI",
+    "VEN"
+   ]
+  },
+  {
+   "id": "ALB",
+   "name": "Albania",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 41.3,
+   "lon": 19.8,
+   "borders": [
+    "ADR",
+    "GRE",
+    "ION",
+    "SER",
+    "TRI"
+   ]
+  },
+  {
+   "id": "SER",
+   "name": "Serbia",
+   "type": "land",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 44.8,
+   "lon": 20.45,
+   "borders": [
+    "ALB",
+    "BUD",
+    "BUL",
+    "GRE",
+    "RUM",
+    "TRI"
+   ]
+  },
+  {
+   "id": "RUM",
+   "name": "Rumania",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 44.43,
+   "lon": 26.1,
+   "borders": [
+    "BLA",
+    "BUD",
+    "BUL",
+    "GAL",
+    "SER",
+    "SEV",
+    "UKR"
+   ]
+  },
+  {
+   "id": "BUL",
+   "name": "Bulgaria",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 42.7,
+   "lon": 23.3,
+   "borders": [
+    "AEG",
+    "BLA",
+    "CON",
+    "GRE",
+    "RUM",
+    "SER"
+   ]
+  },
+  {
+   "id": "GRE",
+   "name": "Greece",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 37.98,
+   "lon": 23.73,
+   "borders": [
+    "AEG",
+    "ALB",
+    "BUL",
+    "ION",
+    "SER"
+   ]
+  },
+  {
+   "id": "ION",
+   "name": "Ionian Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 38.0,
+   "lon": 19.0,
+   "borders": [
+    "ADR",
+    "AEG",
+    "ALB",
+    "APU",
+    "EMS",
+    "GRE",
+    "NAP",
+    "TUN",
+    "TYS"
+   ]
+  },
+  {
+   "id": "CON",
+   "name": "Constantinople",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Turkey",
+   "lat": 41.0,
+   "lon": 28.97,
+   "borders": [
+    "AEG",
+    "ANK",
+    "BLA",
+    "BUL",
+    "SMY"
+   ]
+  },
+  {
+   "id": "ANK",
+   "name": "Ankara",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Turkey",
+   "lat": 39.93,
+   "lon": 32.86,
+   "borders": [
+    "ARM",
+    "BLA",
+    "CON",
+    "SMY"
+   ]
+  },
+  {
+   "id": "ARM",
+   "name": "Armenia",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 40.5,
+   "lon": 43.5,
+   "borders": [
+    "ANK",
+    "BLA",
+    "SEV",
+    "SMY",
+    "SYR"
+   ]
+  },
+  {
+   "id": "SMY",
+   "name": "Smyrna",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Turkey",
+   "lat": 38.42,
+   "lon": 27.14,
+   "borders": [
+    "AEG",
+    "ANK",
+    "ARM",
+    "CON",
+    "EMS",
+    "SYR"
+   ]
+  },
+  {
+   "id": "SYR",
+   "name": "Syria",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 35.5,
+   "lon": 38.0,
+   "borders": [
+    "ARM",
+    "EMS",
+    "SMY"
+   ]
+  },
+  {
+   "id": "AEG",
+   "name": "Aegean Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 38.5,
+   "lon": 25.5,
+   "borders": [
+    "BUL",
+    "CON",
+    "EMS",
+    "GRE",
+    "ION",
+    "SMY"
+   ]
+  },
+  {
+   "id": "EMS",
+   "name": "Eastern Mediterranean",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 34.5,
+   "lon": 28.0,
+   "borders": [
+    "AEG",
+    "ION",
+    "SMY",
+    "SYR"
+   ]
+  },
+  {
+   "id": "BLA",
+   "name": "Black Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 43.5,
+   "lon": 34.5,
+   "borders": [
+    "ANK",
+    "ARM",
+    "BUL",
+    "CON",
+    "RUM",
+    "SEV"
+   ]
+  }
+ ],
+ "startingUnits": {
+  "England": [
+   {
+    "unit": "F",
+    "prov": "EDI"
+   },
+   {
+    "unit": "F",
+    "prov": "LON"
+   },
+   {
+    "unit": "A",
+    "prov": "LVP"
+   }
+  ],
+  "France": [
+   {
+    "unit": "A",
+    "prov": "PAR"
+   },
+   {
+    "unit": "A",
+    "prov": "MAR"
+   },
+   {
+    "unit": "F",
+    "prov": "BRE"
+   }
+  ],
+  "Germany": [
+   {
+    "unit": "A",
+    "prov": "BER"
+   },
+   {
+    "unit": "A",
+    "prov": "MUN"
+   },
+   {
+    "unit": "F",
+    "prov": "KIE"
+   }
+  ],
+  "Italy": [
+   {
+    "unit": "A",
+    "prov": "ROM"
+   },
+   {
+    "unit": "A",
+    "prov": "VEN"
+   },
+   {
+    "unit": "F",
+    "prov": "NAP"
+   }
+  ],
+  "Austria": [
+   {
+    "unit": "A",
+    "prov": "VIE"
+   },
+   {
+    "unit": "A",
+    "prov": "BUD"
+   },
+   {
+    "unit": "F",
+    "prov": "TRI"
+   }
+  ],
+  "Russia": [
+   {
+    "unit": "A",
+    "prov": "MOS"
+   },
+   {
+    "unit": "A",
+    "prov": "WAR"
+   },
+   {
+    "unit": "F",
+    "prov": "SEV"
+   },
+   {
+    "unit": "F",
+    "prov": "STP"
+   }
+  ],
+  "Turkey": [
+   {
+    "unit": "A",
+    "prov": "CON"
+   },
+   {
+    "unit": "A",
+    "prov": "SMY"
+   },
+   {
+    "unit": "F",
+    "prov": "ANK"
+   }
+  ]
+ },
+ "winSupplyCenters": 18,
+ "notes": [
+  "Bulgaria, Spain and St. Petersburg are modelled as single-coast provinces in v1 for beginner clarity; the variant JSON schema supports splitting them into separate coast territories exactly as vDiplomacy does, and an imported split-coast variant will play with separate coasts."
+ ]
+}

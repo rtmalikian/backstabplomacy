@@ -1,0 +1,675 @@
+{
+ "variant": "Empires of the Crossroads \u2014 Rome, Byzantium, Armenia, Persia, Iberia, Albania, Egypt (historic what-if)",
+ "source": "Original map data created for Backstabplomacy for Raphael's Armenian church play group. A church-group sandbox: empires from different centuries meet on one board \u2014 it is a what-if, not a history exam. Armenia was the first nation to adopt Christianity (301 AD, under Tiridates III, evangelised by St Gregory the Illuminator); Ani was famed as the City of 1001 Churches; Jerusalem starts neutral and is worth exactly one centre like everywhere else \u2014 but watch what your friends will pay for it. Caucasian Albania (no relation to Balkan Albania) and Iberia (no relation to Spain) are the forgotten Christian kingdoms of the Caucasus, restored here to playable glory.",
+ "territories": [
+  {
+   "id": "MED",
+   "name": "Mediterranean Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 35.5,
+   "lon": 19.0,
+   "borders": [
+    "AEG",
+    "ALX",
+    "ATH",
+    "CRE",
+    "CYP",
+    "JER",
+    "ROM",
+    "SIC"
+   ]
+  },
+  {
+   "id": "AEG",
+   "name": "Aegean Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 38.8,
+   "lon": 25.5,
+   "borders": [
+    "ATH",
+    "CON",
+    "CRE",
+    "CYP",
+    "EPH",
+    "MED",
+    "THE"
+   ]
+  },
+  {
+   "id": "BLK",
+   "name": "Black Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 43.4,
+   "lon": 34.5,
+   "borders": [
+    "CON",
+    "EPH",
+    "PHA",
+    "TRA"
+   ]
+  },
+  {
+   "id": "CSP",
+   "name": "Caspian Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 42.8,
+   "lon": 50.5,
+   "borders": [
+    "DER",
+    "ECB",
+    "SHA"
+   ]
+  },
+  {
+   "id": "ROM",
+   "name": "Rome",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Rome",
+   "lat": 41.9,
+   "lon": 12.5,
+   "borders": [
+    "MED",
+    "RAV",
+    "SIC"
+   ]
+  },
+  {
+   "id": "RAV",
+   "name": "Ravenna",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Rome",
+   "lat": 44.42,
+   "lon": 12.2,
+   "borders": [
+    "ATH",
+    "ROM",
+    "SIC"
+   ]
+  },
+  {
+   "id": "SIC",
+   "name": "Sicily",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Rome",
+   "lat": 37.6,
+   "lon": 14.2,
+   "borders": [
+    "CRE",
+    "MED",
+    "RAV",
+    "ROM"
+   ]
+  },
+  {
+   "id": "ATH",
+   "name": "Athens",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Byzantine Empire",
+   "lat": 37.98,
+   "lon": 23.73,
+   "borders": [
+    "AEG",
+    "CRE",
+    "MED",
+    "RAV",
+    "THE"
+   ]
+  },
+  {
+   "id": "THE",
+   "name": "Thessalonica",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Byzantine Empire",
+   "lat": 40.64,
+   "lon": 22.94,
+   "borders": [
+    "AEG",
+    "ATH",
+    "CON"
+   ]
+  },
+  {
+   "id": "CON",
+   "name": "Constantinople",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Byzantine Empire",
+   "lat": 41.0,
+   "lon": 28.97,
+   "borders": [
+    "AEG",
+    "ANT",
+    "BLK",
+    "EPH",
+    "THE",
+    "TRA"
+   ]
+  },
+  {
+   "id": "EPH",
+   "name": "Ephesus (Anatolia)",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 37.94,
+   "lon": 27.34,
+   "borders": [
+    "AEG",
+    "BLK",
+    "CAP",
+    "CON"
+   ]
+  },
+  {
+   "id": "CAP",
+   "name": "Cappadocia",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 38.7,
+   "lon": 35.5,
+   "borders": [
+    "ANI",
+    "ANT",
+    "CIL",
+    "EPH"
+   ]
+  },
+  {
+   "id": "CIL",
+   "name": "Cilicia",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 36.9,
+   "lon": 35.3,
+   "borders": [
+    "ANT",
+    "CAP",
+    "CYP",
+    "SYR"
+   ]
+  },
+  {
+   "id": "ANT",
+   "name": "Antioch",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Byzantine Empire",
+   "lat": 36.16,
+   "lon": 36.16,
+   "borders": [
+    "CAP",
+    "CIL",
+    "CON",
+    "DAM",
+    "SYR"
+   ]
+  },
+  {
+   "id": "SYR",
+   "name": "Syria",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 35.0,
+   "lon": 38.5,
+   "borders": [
+    "ANT",
+    "CIL",
+    "DAM",
+    "PAL",
+    "TIG"
+   ]
+  },
+  {
+   "id": "DAM",
+   "name": "Damascus",
+   "type": "land",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 33.5,
+   "lon": 36.3,
+   "borders": [
+    "ANT",
+    "JER",
+    "PET",
+    "SYR"
+   ]
+  },
+  {
+   "id": "JER",
+   "name": "Jerusalem \u2014 the Holy City",
+   "type": "land",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 31.78,
+   "lon": 35.22,
+   "borders": [
+    "ALX",
+    "DAM",
+    "MED",
+    "PET"
+   ]
+  },
+  {
+   "id": "PET",
+   "name": "Petra",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 30.33,
+   "lon": 35.44,
+   "borders": [
+    "CAI",
+    "DAM",
+    "JER",
+    "PAL"
+   ]
+  },
+  {
+   "id": "PAL",
+   "name": "Palmyra",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 34.55,
+   "lon": 38.27,
+   "borders": [
+    "CTE",
+    "PET",
+    "SYR"
+   ]
+  },
+  {
+   "id": "ALX",
+   "name": "Alexandria",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Egypt",
+   "lat": 31.2,
+   "lon": 29.9,
+   "borders": [
+    "CAI",
+    "CYP",
+    "JER",
+    "MED"
+   ]
+  },
+  {
+   "id": "CAI",
+   "name": "Memphis (Cairo)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Egypt",
+   "lat": 30.0,
+   "lon": 31.25,
+   "borders": [
+    "ALX",
+    "LUX",
+    "PET"
+   ]
+  },
+  {
+   "id": "LUX",
+   "name": "Thebes (Luxor)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Egypt",
+   "lat": 25.69,
+   "lon": 32.64,
+   "borders": [
+    "CAI"
+   ]
+  },
+  {
+   "id": "CYP",
+   "name": "Cyprus",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 35.05,
+   "lon": 33.0,
+   "borders": [
+    "AEG",
+    "ALX",
+    "CIL",
+    "MED"
+   ]
+  },
+  {
+   "id": "CRE",
+   "name": "Crete",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 35.2,
+   "lon": 24.9,
+   "borders": [
+    "AEG",
+    "ATH",
+    "MED",
+    "SIC"
+   ]
+  },
+  {
+   "id": "TRA",
+   "name": "Trebizond",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 41.0,
+   "lon": 39.72,
+   "borders": [
+    "ANI",
+    "BLK",
+    "CON",
+    "PHA"
+   ]
+  },
+  {
+   "id": "ANI",
+   "name": "Ani \u2014 City of 1001 Churches",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Kingdom of Armenia",
+   "lat": 40.5,
+   "lon": 43.57,
+   "borders": [
+    "ARTX",
+    "CAP",
+    "KUT",
+    "TRA",
+    "VAN"
+   ]
+  },
+  {
+   "id": "ARTX",
+   "name": "Artaxata (Armenian capital)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Kingdom of Armenia",
+   "lat": 39.95,
+   "lon": 44.57,
+   "borders": [
+    "ANI",
+    "MTS",
+    "QAB",
+    "VAN"
+   ]
+  },
+  {
+   "id": "VAN",
+   "name": "Van (Lake Van)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Kingdom of Armenia",
+   "lat": 38.5,
+   "lon": 43.4,
+   "borders": [
+    "ANI",
+    "ARTX",
+    "ECB",
+    "TIG"
+   ]
+  },
+  {
+   "id": "TIG",
+   "name": "Tigranocerta",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 38.14,
+   "lon": 41.0,
+   "borders": [
+    "CTE",
+    "SYR",
+    "VAN"
+   ]
+  },
+  {
+   "id": "CTE",
+   "name": "Ctesiphon (Mesopotamia)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Sasanian Persia",
+   "lat": 33.1,
+   "lon": 44.58,
+   "borders": [
+    "ECB",
+    "PAL",
+    "PER",
+    "TIG"
+   ]
+  },
+  {
+   "id": "PER",
+   "name": "Persepolis",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Sasanian Persia",
+   "lat": 29.94,
+   "lon": 52.89,
+   "borders": [
+    "CTE"
+   ]
+  },
+  {
+   "id": "ECB",
+   "name": "Ecbatana (Hamadan)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Sasanian Persia",
+   "lat": 34.8,
+   "lon": 48.5,
+   "borders": [
+    "CSP",
+    "CTE",
+    "QAB",
+    "VAN"
+   ]
+  },
+  {
+   "id": "MTS",
+   "name": "Mtskheta (Iberian capital)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Kingdom of Iberia",
+   "lat": 41.84,
+   "lon": 44.71,
+   "borders": [
+    "ARTX",
+    "KUT",
+    "PHA",
+    "QAB"
+   ]
+  },
+  {
+   "id": "KUT",
+   "name": "Kutaisi (Colchis)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Kingdom of Iberia",
+   "lat": 42.25,
+   "lon": 42.68,
+   "borders": [
+    "ANI",
+    "MTS",
+    "PHA"
+   ]
+  },
+  {
+   "id": "PHA",
+   "name": "Phasis",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Kingdom of Iberia",
+   "lat": 42.15,
+   "lon": 41.67,
+   "borders": [
+    "BLK",
+    "KUT",
+    "MTS",
+    "TRA"
+   ]
+  },
+  {
+   "id": "QAB",
+   "name": "Qabala (Albanian capital)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Caucasian Albania",
+   "lat": 40.98,
+   "lon": 47.85,
+   "borders": [
+    "ARTX",
+    "DER",
+    "ECB",
+    "MTS",
+    "SHA"
+   ]
+  },
+  {
+   "id": "SHA",
+   "name": "Shabaran",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Caucasian Albania",
+   "lat": 41.2,
+   "lon": 48.9,
+   "borders": [
+    "CSP",
+    "DER",
+    "QAB"
+   ]
+  },
+  {
+   "id": "DER",
+   "name": "Derbent \u2014 the Caspian Gates",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Caucasian Albania",
+   "lat": 42.06,
+   "lon": 48.29,
+   "borders": [
+    "CSP",
+    "QAB",
+    "SHA"
+   ]
+  }
+ ],
+ "startingUnits": {
+  "Rome": [
+   {
+    "unit": "A",
+    "prov": "ROM"
+   },
+   {
+    "unit": "F",
+    "prov": "RAV"
+   },
+   {
+    "unit": "A",
+    "prov": "SIC"
+   }
+  ],
+  "Byzantine Empire": [
+   {
+    "unit": "A",
+    "prov": "CON"
+   },
+   {
+    "unit": "F",
+    "prov": "ATH"
+   },
+   {
+    "unit": "A",
+    "prov": "ANT"
+   }
+  ],
+  "Kingdom of Armenia": [
+   {
+    "unit": "A",
+    "prov": "ARTX"
+   },
+   {
+    "unit": "A",
+    "prov": "ANI"
+   },
+   {
+    "unit": "A",
+    "prov": "VAN"
+   }
+  ],
+  "Sasanian Persia": [
+   {
+    "unit": "A",
+    "prov": "CTE"
+   },
+   {
+    "unit": "A",
+    "prov": "PER"
+   },
+   {
+    "unit": "A",
+    "prov": "ECB"
+   }
+  ],
+  "Kingdom of Iberia": [
+   {
+    "unit": "A",
+    "prov": "MTS"
+   },
+   {
+    "unit": "F",
+    "prov": "PHA"
+   },
+   {
+    "unit": "A",
+    "prov": "KUT"
+   }
+  ],
+  "Caucasian Albania": [
+   {
+    "unit": "A",
+    "prov": "QAB"
+   },
+   {
+    "unit": "F",
+    "prov": "DER"
+   },
+   {
+    "unit": "A",
+    "prov": "SHA"
+   }
+  ],
+  "Egypt": [
+   {
+    "unit": "F",
+    "prov": "ALX"
+   },
+   {
+    "unit": "A",
+    "prov": "CAI"
+   },
+   {
+    "unit": "A",
+    "prov": "LUX"
+   }
+  ]
+ },
+ "winSupplyCenters": 12
+}

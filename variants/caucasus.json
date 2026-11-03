@@ -1,0 +1,767 @@
+{
+ "variant": "Caucasus & Caspian \u2014 Armenia, Georgia, Azerbaijan, Persia, Russia, Turkey, Greece",
+ "source": "Original map data created for Backstabplomacy for Raphael's Armenian church play group. The Caucasus is one of the great under-represented boards in strategy gaming: seven peoples between two seas, one mountain spine, and everybody's empire has marched through it. Centres: Yerevan, Artsakh and Gyumri for Armenia; Tbilisi, Kutaisi and Batumi for Georgia; Baku, Ganja and Shirvan for Azerbaijan; Constantinople, Trabzon and Van for Turkey (yes, someone has to play Turkey \u2014 draw lots, loser gets the Bosphorus); Tabriz, Tehran and Gilan for Persia; Krasnodar, Crimea and Makhachkala for Russia; Athens, Thessaloniki and Crete for Greece. Kars, Derbent and Cyprus start neutral.",
+ "territories": [
+  {
+   "id": "BLK",
+   "name": "Black Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 43.4,
+   "lon": 34.0,
+   "borders": [
+    "ABK",
+    "AEG",
+    "BAT",
+    "CON",
+    "CRI",
+    "NOV",
+    "SOC",
+    "TRA"
+   ]
+  },
+  {
+   "id": "AEG",
+   "name": "Aegean Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 39.0,
+   "lon": 25.3,
+   "borders": [
+    "ATH",
+    "BLK",
+    "CON",
+    "CRE",
+    "MED",
+    "THE"
+   ]
+  },
+  {
+   "id": "MED",
+   "name": "Eastern Mediterranean",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 34.8,
+   "lon": 27.0,
+   "borders": [
+    "AEG",
+    "ALE",
+    "CON",
+    "CRE",
+    "CYP"
+   ]
+  },
+  {
+   "id": "CSP",
+   "name": "Caspian Sea",
+   "type": "sea",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 42.6,
+   "lon": 50.8,
+   "borders": [
+    "BAK",
+    "DER",
+    "GIL",
+    "LAN",
+    "MAK",
+    "SHI"
+   ]
+  },
+  {
+   "id": "SEV",
+   "name": "Lake Sevan",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 40.3,
+   "lon": 45.0,
+   "borders": [
+    "ART",
+    "KAK",
+    "LOR",
+    "YER"
+   ]
+  },
+  {
+   "id": "YER",
+   "name": "Yerevan",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Armenia",
+   "lat": 40.18,
+   "lon": 44.51,
+   "borders": [
+    "ARD",
+    "GYU",
+    "KAR",
+    "LOR",
+    "NAK",
+    "SEV"
+   ]
+  },
+  {
+   "id": "GYU",
+   "name": "Gyumri (Alexandropol)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Armenia",
+   "lat": 40.79,
+   "lon": 43.85,
+   "borders": [
+    "BAT",
+    "KAR",
+    "LOR",
+    "YER"
+   ]
+  },
+  {
+   "id": "LOR",
+   "name": "Lori (Vanadzor)",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 41.0,
+   "lon": 44.5,
+   "borders": [
+    "GYU",
+    "KAK",
+    "SEV",
+    "TBI",
+    "YER"
+   ]
+  },
+  {
+   "id": "SYU",
+   "name": "Syunik (Kapan)",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 39.3,
+   "lon": 46.4,
+   "borders": [
+    "ARD",
+    "ART",
+    "GAN",
+    "NAK"
+   ]
+  },
+  {
+   "id": "ART",
+   "name": "Artsakh (Stepanakert)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Armenia",
+   "lat": 39.82,
+   "lon": 46.75,
+   "borders": [
+    "GAN",
+    "KAK",
+    "SEV",
+    "SHI",
+    "SYU"
+   ]
+  },
+  {
+   "id": "NAK",
+   "name": "Nakhichevan",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 39.2,
+   "lon": 45.4,
+   "borders": [
+    "ARD",
+    "SYU",
+    "TAB",
+    "YER"
+   ]
+  },
+  {
+   "id": "KAR",
+   "name": "Kars",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 40.6,
+   "lon": 43.08,
+   "borders": [
+    "ARD",
+    "BAT",
+    "ERZ",
+    "GYU",
+    "TRA",
+    "VAN",
+    "YER"
+   ]
+  },
+  {
+   "id": "TBI",
+   "name": "Tbilisi",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Georgia",
+   "lat": 41.72,
+   "lon": 44.78,
+   "borders": [
+    "KAK",
+    "KUT",
+    "LOR",
+    "OSS"
+   ]
+  },
+  {
+   "id": "KAK",
+   "name": "Kakheti",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 41.9,
+   "lon": 45.6,
+   "borders": [
+    "ART",
+    "DER",
+    "GAN",
+    "LOR",
+    "SEV",
+    "TBI"
+   ]
+  },
+  {
+   "id": "KUT",
+   "name": "Kutaisi",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Georgia",
+   "lat": 42.25,
+   "lon": 42.68,
+   "borders": [
+    "ABK",
+    "BAT",
+    "OSS",
+    "TBI"
+   ]
+  },
+  {
+   "id": "BAT",
+   "name": "Batumi",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Georgia",
+   "lat": 41.65,
+   "lon": 41.63,
+   "borders": [
+    "ABK",
+    "BLK",
+    "GYU",
+    "KAR",
+    "KUT",
+    "TRA"
+   ]
+  },
+  {
+   "id": "ABK",
+   "name": "Abkhazia (Sukhumi)",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 43.0,
+   "lon": 41.02,
+   "borders": [
+    "BAT",
+    "BLK",
+    "KUT",
+    "OSS",
+    "SOC"
+   ]
+  },
+  {
+   "id": "BAK",
+   "name": "Baku",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Azerbaijan",
+   "lat": 40.41,
+   "lon": 49.87,
+   "borders": [
+    "CSP",
+    "DER",
+    "SHI"
+   ]
+  },
+  {
+   "id": "GAN",
+   "name": "Ganja",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Azerbaijan",
+   "lat": 40.68,
+   "lon": 46.36,
+   "borders": [
+    "ART",
+    "KAK",
+    "SHI",
+    "SYU",
+    "TAB"
+   ]
+  },
+  {
+   "id": "SHI",
+   "name": "Shirvan (Shamakhi)",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Azerbaijan",
+   "lat": 40.9,
+   "lon": 48.6,
+   "borders": [
+    "ART",
+    "BAK",
+    "CSP",
+    "DER",
+    "GAN"
+   ]
+  },
+  {
+   "id": "LAN",
+   "name": "Lankaran",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 38.75,
+   "lon": 48.85,
+   "borders": [
+    "ARD",
+    "CSP",
+    "GIL",
+    "TAB"
+   ]
+  },
+  {
+   "id": "DER",
+   "name": "Derbent",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 42.06,
+   "lon": 48.29,
+   "borders": [
+    "BAK",
+    "CHE",
+    "CSP",
+    "KAK",
+    "MAK",
+    "SHI"
+   ]
+  },
+  {
+   "id": "KRA",
+   "name": "Krasnodar (Kuban)",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Russia",
+   "lat": 45.03,
+   "lon": 38.97,
+   "borders": [
+    "CHE",
+    "CRI",
+    "NOV",
+    "OSS"
+   ]
+  },
+  {
+   "id": "NOV",
+   "name": "Novorossiysk",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 44.72,
+   "lon": 37.77,
+   "borders": [
+    "BLK",
+    "CRI",
+    "KRA",
+    "SOC"
+   ]
+  },
+  {
+   "id": "SOC",
+   "name": "Sochi",
+   "type": "coast",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 43.58,
+   "lon": 39.72,
+   "borders": [
+    "ABK",
+    "BLK",
+    "NOV",
+    "OSS"
+   ]
+  },
+  {
+   "id": "CRI",
+   "name": "Crimea (Sevastopol)",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Russia",
+   "lat": 44.95,
+   "lon": 34.1,
+   "borders": [
+    "BLK",
+    "KRA",
+    "NOV"
+   ]
+  },
+  {
+   "id": "OSS",
+   "name": "North Ossetia (Vladikavkaz)",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 43.02,
+   "lon": 44.68,
+   "borders": [
+    "ABK",
+    "CHE",
+    "KRA",
+    "KUT",
+    "SOC",
+    "TBI"
+   ]
+  },
+  {
+   "id": "CHE",
+   "name": "Chechnya (Grozny)",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 43.32,
+   "lon": 45.69,
+   "borders": [
+    "DER",
+    "KRA",
+    "MAK",
+    "OSS"
+   ]
+  },
+  {
+   "id": "MAK",
+   "name": "Makhachkala",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Russia",
+   "lat": 42.98,
+   "lon": 47.5,
+   "borders": [
+    "CHE",
+    "CSP",
+    "DER"
+   ]
+  },
+  {
+   "id": "CON",
+   "name": "Constantinople",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Turkey",
+   "lat": 41.0,
+   "lon": 28.97,
+   "borders": [
+    "AEG",
+    "ALE",
+    "BLK",
+    "CYP",
+    "MED",
+    "THE",
+    "TRA"
+   ]
+  },
+  {
+   "id": "TRA",
+   "name": "Trabzon",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Turkey",
+   "lat": 41.0,
+   "lon": 39.72,
+   "borders": [
+    "BAT",
+    "BLK",
+    "CON",
+    "ERZ",
+    "KAR"
+   ]
+  },
+  {
+   "id": "ERZ",
+   "name": "Erzurum",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 39.9,
+   "lon": 41.27,
+   "borders": [
+    "KAR",
+    "TRA",
+    "VAN"
+   ]
+  },
+  {
+   "id": "VAN",
+   "name": "Van",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Turkey",
+   "lat": 38.5,
+   "lon": 43.4,
+   "borders": [
+    "ALE",
+    "ARD",
+    "ERZ",
+    "KAR",
+    "TAB"
+   ]
+  },
+  {
+   "id": "ALE",
+   "name": "Aleppo",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 36.2,
+   "lon": 37.13,
+   "borders": [
+    "CON",
+    "CYP",
+    "MED",
+    "VAN"
+   ]
+  },
+  {
+   "id": "TAB",
+   "name": "Tabriz",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Persia",
+   "lat": 38.08,
+   "lon": 46.29,
+   "borders": [
+    "ARD",
+    "GAN",
+    "LAN",
+    "NAK",
+    "TEH",
+    "VAN"
+   ]
+  },
+  {
+   "id": "ARD",
+   "name": "Ardabil",
+   "type": "land",
+   "supplyCenter": false,
+   "home": null,
+   "lat": 38.25,
+   "lon": 48.3,
+   "borders": [
+    "GIL",
+    "KAR",
+    "LAN",
+    "NAK",
+    "SYU",
+    "TAB",
+    "VAN",
+    "YER"
+   ]
+  },
+  {
+   "id": "TEH",
+   "name": "Tehran",
+   "type": "land",
+   "supplyCenter": true,
+   "home": "Persia",
+   "lat": 35.69,
+   "lon": 51.39,
+   "borders": [
+    "GIL",
+    "TAB"
+   ]
+  },
+  {
+   "id": "GIL",
+   "name": "Gilan (Rasht)",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Persia",
+   "lat": 37.28,
+   "lon": 49.58,
+   "borders": [
+    "ARD",
+    "CSP",
+    "LAN",
+    "TEH"
+   ]
+  },
+  {
+   "id": "ATH",
+   "name": "Athens",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Greece",
+   "lat": 37.98,
+   "lon": 23.73,
+   "borders": [
+    "AEG",
+    "CRE",
+    "THE"
+   ]
+  },
+  {
+   "id": "THE",
+   "name": "Thessaloniki",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Greece",
+   "lat": 40.64,
+   "lon": 22.94,
+   "borders": [
+    "AEG",
+    "ATH",
+    "CON"
+   ]
+  },
+  {
+   "id": "CRE",
+   "name": "Crete",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": "Greece",
+   "lat": 35.2,
+   "lon": 24.9,
+   "borders": [
+    "AEG",
+    "ATH",
+    "CYP",
+    "MED"
+   ]
+  },
+  {
+   "id": "CYP",
+   "name": "Cyprus",
+   "type": "coast",
+   "supplyCenter": true,
+   "home": null,
+   "lat": 35.05,
+   "lon": 33.0,
+   "borders": [
+    "ALE",
+    "CON",
+    "CRE",
+    "MED"
+   ]
+  }
+ ],
+ "startingUnits": {
+  "Armenia": [
+   {
+    "unit": "A",
+    "prov": "YER"
+   },
+   {
+    "unit": "A",
+    "prov": "ART"
+   },
+   {
+    "unit": "A",
+    "prov": "GYU"
+   }
+  ],
+  "Georgia": [
+   {
+    "unit": "A",
+    "prov": "TBI"
+   },
+   {
+    "unit": "A",
+    "prov": "KUT"
+   },
+   {
+    "unit": "F",
+    "prov": "BAT"
+   }
+  ],
+  "Azerbaijan": [
+   {
+    "unit": "F",
+    "prov": "BAK"
+   },
+   {
+    "unit": "A",
+    "prov": "GAN"
+   },
+   {
+    "unit": "A",
+    "prov": "SHI"
+   }
+  ],
+  "Russia": [
+   {
+    "unit": "A",
+    "prov": "KRA"
+   },
+   {
+    "unit": "F",
+    "prov": "CRI"
+   },
+   {
+    "unit": "F",
+    "prov": "MAK"
+   }
+  ],
+  "Turkey": [
+   {
+    "unit": "A",
+    "prov": "CON"
+   },
+   {
+    "unit": "F",
+    "prov": "TRA"
+   },
+   {
+    "unit": "A",
+    "prov": "VAN"
+   }
+  ],
+  "Persia": [
+   {
+    "unit": "A",
+    "prov": "TAB"
+   },
+   {
+    "unit": "A",
+    "prov": "TEH"
+   },
+   {
+    "unit": "F",
+    "prov": "GIL"
+   }
+  ],
+  "Greece": [
+   {
+    "unit": "A",
+    "prov": "ATH"
+   },
+   {
+    "unit": "F",
+    "prov": "THE"
+   },
+   {
+    "unit": "F",
+    "prov": "CRE"
+   }
+  ]
+ },
+ "winSupplyCenters": 11
+}
