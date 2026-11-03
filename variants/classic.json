@@ -225,7 +225,6 @@
    "lat": 57.8,
    "lon": 10.5,
    "borders": [
-    "BAL",
     "DEN",
     "NTH",
     "NWY",
@@ -247,7 +246,6 @@
     "KIE",
     "LVN",
     "PRU",
-    "SKA",
     "SWE"
    ]
   },

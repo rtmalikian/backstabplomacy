@@ -5,7 +5,7 @@
 - Login is **Google accounts only** (its FAQ: you can use a Google account tied to a non-Gmail address). In Feb 2020 it migrated login systems; users who changed their profile email got locked out of old games — a cautionary tale baked into this project's design (saves keyed to the Google `sub`, not the email).
 - Loved for: clean, legible orders; a genuinely useful **sandbox** to test adjudication; tick-box group press; email notifications for press, adjudication and impending deadlines; decent mobile adaptation.
 - Its FAQ is explicit that **map variants are the #1 feature request and are not supported**, because its clickable-map pipeline was manual/tedious.
-- Player complaints found in community threads: illegal orders are accepted and simply fail (including split-coast mistakes), high NMR/CD rates with no built-in nudges, no in-client hints for new players, and a functional-but-plain interface.
+- One nuance the deep-research pass surfaced: Backstabbr allows illegal orders **by design**, as a lying mechanic (you can claim a failed order was unintentional) — but the same threads call it unforgiving for beginners who simply forget split coasts. Backstabplomacy follows Raphael's explicit call: alerts and a pre-submit gate, with legal-but-risky orders still allowed through after a warning. Player complaints found in community threads: illegal orders simply fail (including split-coast mistakes), high NMR/CD rates with no built-in nudges, no in-client hints for new players, and a functional-but-plain interface.
 
 Sources: backstabbr.com/faq; webdiplomacy.net forum thread comparing platforms; community game-recruitment threads (Online-Go forums, Realms Beyond).
 
